@@ -1,0 +1,238 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Hubballi', sans-serif;
+    text-align: center;
+}
+
+.flex {
+    display: flex;
+}
+
+#logo {
+    height: 80px;
+}
+
+header {
+    background-color: #a1aff7;
+    height: 100px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header h1 {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 4em;
+}
+
+.searchSection {
+    display: none;
+}
+
+.searchBtn {
+    height: 30px;
+    cursor: pointer;
+}
+
+input {
+    height: 35px;
+    width: 280px;
+}
+
+.searchBar {
+    width: 312px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.randomMeal {
+    width: 75vw;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+    font-size: xx-large;
+    height: 300px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 2px;
+}
+
+.randomImg img {
+    height: 250px;
+    border-radius: 2%;
+}
+
+.random {
+    background-color: #a1aff7;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+.randomText {
+    flex-direction: column;
+    justify-content: space-around;
+    height: 250px;
+}
+
+.randomText h2 {
+    font-family: 'Metrophobic', sans-serif;
+}
+
+.searchSection h1 {
+    padding: 8px;
+}
+
+hr {
+    width: 90vw;
+    margin-left: 5vw;
+    border: 1px solid grey;
+}
+
+.searchItems img {
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+
+}
+
+.searched {
+    display: grid;
+    padding: 20px;
+    justify-content: space-around;
+    align-items: center;
+    grid-template-columns: 250px 250px 250px 250px;
+    row-gap: 30px;
+}
+
+.searchItems {
+    width: 250px;
+    height: 280px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    font-size: x-large;
+}
+
+.modal {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    background: rgba(0, 0, 0, .5);
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.modal-content {
+    width: 25vw;
+    height: 500px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.modal-content h2 {
+    font-size: xx-large;
+}
+
+.modal-x {
+    flex-direction: row-reverse;
+    padding-right: 10px;
+    cursor: pointer;
+}
+
+.modal-content ul {
+    padding: 20px 50px;
+    font-size: larger;
+    list-style-type: decimal;
+    line-height: 25px;
+}
+
+.ingredient-list {
+    height: 424px;
+    overflow: scroll;
+}
+
+/* To hide the scroll bar in chrome */
+.ingredient-list::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* To hide the scrollbar in Edge and firefox */
+.ingredient-list {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+ul {
+    padding-inline-start: 0;
+    margin-inline-start: 0;
+}
+
+
+@media(max-width:600px) {
+    header {
+        height: 150px;
+    }
+
+    header h1 {
+        padding: 30px;
+        font-size: x-large;
+    }
+
+    #logo {
+        height: 60px;
+        padding-left: 1em;
+    }
+
+    input {
+        width: 18em;
+    }
+
+    .searchBar {
+        width: 250px;
+        position: absolute;
+        top: 7.5em;
+    }
+
+    .randomMeal {
+        width: 80vw;
+        height: 13em;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .randomText {
+        height: 6em;
+        font-size: .75em;
+    }
+
+    .random {
+        flex-direction: column;
+        height: 30em;
+    }
+
+    .randomImg img {
+        height: 6em;
+    }
+
+    .searchItems img {
+        height: 200px;
+        width: 200px;
+    }
+
+    .searched {
+        grid-template-columns: 240px;
+        justify-content: center;
+    }
+
+    .modal-content {
+        width: 15em;
+    }
+
+}

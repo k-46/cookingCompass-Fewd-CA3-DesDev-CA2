@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hubballi&family=Jura:wght@300;400;500;600;700&family=Metrophobic&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="./assests/chef.png">
+    <link rel="stylesheet" href="./style.css">
+    <title>Cooking Compass</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <header class="flex">
+        <img src="./assests/logo.png" alt="logo" id="logo">
+        <h1>
+            Cooking Compass
+        </h1>
+        <div class="searchBar flex ">
+            <input type="text" placeholder="what do we cooking?" id="input">
+            <img src="./assests/search.png" alt="search" class="searchBtn" onclick="getSearched()">
+        </div>
+    </header>
+    <div class="random flex">
+        <div class="randomMeal flex" onclick="displayIngredients('flex')">
+            <div class="flex randomText">
+                <h2>
+                    Random Meal of the Day
+                </h2>
+                <h3 class="randomStrMeal">
+                </h3>
+                <h4>
+                    Category: <span class="randomCategory">
+                    </span>
+                </h4>
+            </div>
+            <div class="randomImg flex">
+                <img src="" alt="random" id="randomImage">
+            </div>
+        </div>
+    </div>
+    <div class="modal flex">
+        <div class="modal-content">
+            <h1 class="modal-x flex" onclick="displayIngredients('none')">
+                &#10006
+            </h1>
+            <h2>
+                Ingredients
+            </h2>
+            <div>
+                <ul class="ingredient-list ">
+
+                </ul>
+
+            </div>
+        </div>
+    </div>
+    <div class="searchSection">
+        <h1>
+            Searched Category: <span class="searchedText">
+            </span>
+        </h1>
+        <hr>
+        <div class="searched">
+
+        </div>
+
+    </div>
+</body>
+<script src="./app.js"></script>
+
+</html>
